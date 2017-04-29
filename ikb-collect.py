@@ -59,3 +59,7 @@ if not os.path.isfile('ikb.csv'):
     df.to_csv('ikb.csv', header ='column_names', index=False)
 else:
     df.to_csv('ikb.csv', mode = 'a', header=False, index=False)
+
+#End
+print(df)
+print("===== Succesful Finished =====")   
