@@ -35,7 +35,7 @@ except AttributeError:
 # Current weather
 OWMID = os.environ['OWMID']
 weather_page = requests.get('http://api.openweathermap.org/data/2.5/weather?q=Innsbruck,%20ATE&appid=' + OWMID)
-weather = json.loads(weather_page.content)
+weather = json.loads(weather_page.content.decode())
 temp = weather['main']['temp']
 humidity = int(weather['main']['humidity'])/100
 clouds = int(weather['clouds']['all'])/100
